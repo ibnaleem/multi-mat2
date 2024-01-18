@@ -10,7 +10,7 @@
 [MAT2](https://github.com/tpet/mat2) is currently in **beta**, please don't use it for anything critical.
 
 ## Purpose
-Multi-MAT2 automates MAT2, a CLI tool for Unix terminals, making metadata cleaning more efficient. Instead of manually typing filenames, multi-mat2 utilizes Python subprocesses to apply MAT2 to each file in a directory. It then moves only the cleaned files to a designated folder, leaving the originals untouched.
+Multi-MAT2 automates MAT2, a CLI tool for Unix terminals, making metadata cleaning more efficient. Instead of manually typing filenames, Multi-MAT2 utilizes Python subprocesses to apply MAT2 to each file in a directory. It then moves only the cleaned files to a designated folder, leaving the originals untouched.
 
 ### Using only MAT2:
 ```
@@ -21,7 +21,7 @@ Multi-MAT2 automates MAT2, a CLI tool for Unix terminals, making metadata cleani
 > python3 main.py <file_extension>
 ```
 
-Multi-MAT2 has automated the tidious task of typing every file you wish you clean.
+Multi-MAT2 has automated the tidious task of typing every file you wish to clean.
 
 ## Usage
 Make sure MAT2 and Python are installed on your system. Move all files you wish to clean inside a new directory. Make sub-directory within the new directory called "cleaned":
