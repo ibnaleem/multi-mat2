@@ -55,6 +55,13 @@ def delete_cleaned_files():
         print(e)
 
 if __name__ == "__main__":
+
+    if len(sys.argv) != 2:
+        print("Usage: python3 main.py <file_extension>")
+        sys.exit(1)
+
+    file_extension = sys.argv[1].lower()
+
     clean_files()
     move_clean_files()
     delete_cleaned_files()
