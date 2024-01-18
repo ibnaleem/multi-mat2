@@ -24,7 +24,7 @@ Multi-MAT2 automates MAT2, a CLI tool for Unix terminals, making metadata cleani
 Multi-MAT2 has automated the tidious task of typing every file you wish to clean.
 
 ## Usage
-Make sure MAT2 and Python are installed on your system. Move all files you wish to clean inside a new directory. Make sub-directory within the new directory called "cleaned":
+Make sure MAT2 and Python are installed on your system. Move all files you wish to clean inside a new directory. Make sub-directory within the new directory called `/cleaned`:
 ```
 > mkdir images
 > mv file1 images // move all files inside this directory
@@ -35,7 +35,9 @@ Clone this repository and copy `main.py` into the directory (e.g images) but out
 ```
 > cd images
 > git clone https://github.com/ibnaleem/multi-mat2.git
+> cd multi-mat2
 > mv main.py /images
+> cd ..
 > rm -rf multi-mat2
 ```
 Your new directory should contain all your files you wish to clean, a `main.py` file, and a `/cleaned` sub-directory. You can run the script in a terminal by providing a file extension argument:
