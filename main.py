@@ -1,4 +1,4 @@
-import os, subprocess
+import os, sys, subprocess
 
 file_extention = input(str("Enter file extention: "))
 current_directory = os.getcwd()
@@ -7,7 +7,7 @@ cleaned_directory = os.path.join(current_directory, "cleaned")
 def clean_files():
 
     try:
-        os.makedirs(cleaned_directory, exists_ok=True)
+        os.makedirs(cleaned_directory, exist_ok=True)
 
         for filename in os.listdir(current_directory):
             if filename.endswith(file_extention) and filename != "main.py":
@@ -23,7 +23,7 @@ def clean_files():
 def move_clean_files():
 
     try:
-        os.makedirs(cleaned_directory, exists_ok=True)
+        os.makedirs(cleaned_directory, exist_ok=True)
 
         for filename in os.listdir(current_directory):
             if filename.endswith(file_extention) and filename != "main.py":
@@ -40,7 +40,7 @@ def move_clean_files():
 
 def delete_cleaned_files():
     try:
-        os.makedirs(cleaned_directory, exists_ok=True)
+        os.makedirs(cleaned_directory, exist_ok=True)
 
         for filename in os.listdir(current_directory):
             if filename.endswith(file_extention) and filename != "main.py":
@@ -55,13 +55,6 @@ def delete_cleaned_files():
         print(e)
 
 if __name__ == "__main__":
-
-    if len(sys.argv) != 2:
-        print("Usage: python3 main.py <file_extension>")
-        sys.exit(1)
-
-    file_extension = sys.argv[1].lower()
-
     clean_files()
     move_clean_files()
     delete_cleaned_files()
